@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:uas_190103155/home/home.dart';
 
 class LoginApp extends StatefulWidget {
   @override
@@ -59,7 +60,7 @@ class _LoginAppState extends State<LoginApp> {
                       ),
                     ),
                     Container(
-                      padding: EdgeInsets.symmetric(vertical: 10),
+                        padding: EdgeInsets.symmetric(vertical: 10),
                         alignment: Alignment.centerRight,
                         child: TextButton(
                             onPressed: () {}, child: Text('Lupa Password?'))),
@@ -67,7 +68,12 @@ class _LoginAppState extends State<LoginApp> {
                       width: double.infinity,
                       height: 50,
                       child: ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => Home()),
+                            );
+                          },
                           style: ElevatedButton.styleFrom(
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(10)),
@@ -81,7 +87,8 @@ class _LoginAppState extends State<LoginApp> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text('Belum punya akun ?'),
-                        TextButton(onPressed: () {}, child: Text('Daftar disini'))
+                        TextButton(
+                            onPressed: () {}, child: Text('Daftar disini'))
                       ],
                     ),
                   ],
